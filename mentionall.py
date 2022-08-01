@@ -83,13 +83,13 @@ bayrak = "🏳️‍🌈 🏳️‍⚧️ 🇺🇳 🇦🇫 🇦🇽 🇦🇱 �
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗**")
+    return await event.respond("**Bu komutu gruplar ve kanallar için geçerli❗** \n@SakirBey2 ☄️")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu komutu sadace yöneticiler kullanabilir〽️**")
+    return await event.respond("**Bu komutu sadace yoneticiler kullana bilir〽️** \n@SakirBey2 ☄️")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -98,11 +98,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Önceki mesajları etiket işlemi için kullanamıyorum.**")
+        return await event.respond("**Geçmiş mesajlar için etiket ede bilmiom**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Etiket yapmak için mesaj yok❗️")
+    return await event.respond("Etiket Yapmak için sebeb yok❗️")
   else:
-    return await event.respond("**Etikete Başlamak için mesaj yazmalısın!**")
+    return await event.respond("**Etikete Başlamak için sebeb yazın...!**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -112,18 +112,13 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{random.choice(bayrak)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Etiket işlemi başarıyla durduruldu❌**")
+        await event.respond("** Etiket işlemi başarıyla durduruldu❌**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-	
-	sender = await event.get_sender()
-    rxyzdev_initT = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in rxyzdev_tagTot:await event.respond(f"**✅Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {rxyzdev_tagTot[event.chat_id]}\n\nEtiket İşlemini Başlatan: {rxyzdev_initT}**")
-
 	
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
