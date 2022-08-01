@@ -334,18 +334,12 @@ async def mentionall(tagadmin):
 		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
 		sleep(0.5)
 	
-		
 @client.on(events.NewMessage(pattern='/alive'))
 async def handler(event):
     # Alive Bot Durumunu Kontrol Etme Yalnızca Adminler İçin !
     if str(event.sender_id) not in SUDO_USERS:
-        print('')
-	#return await event.reply("__Sen sahibim değilsin !__")
-	
-    else:
-        await event.reply('**Sayın sahibim durmaksızın çalışmaktayım endişelenme!**')
-    if event.sender_id == 5432155018:
-	await event.reply('Sayın geliştiricim durmaksızın çalışmaktayım endişelenme!**') 
+        return await event.reply("__Sen sahibim değilsin !__")
+    await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @SakirBey1')
 	
 @client.on(events.NewMessage(pattern='^/stats ?(.*)'))
 async def son_durum(event):
