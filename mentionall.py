@@ -341,7 +341,7 @@ async def handler(event):
     if str(event.sender_id) not in SUDO_USERS:
         print('')
 	#return await event.reply("__Sen sahibim değilsin !__")
-	pass
+	
     else:
         await event.reply('**Sayın sahibim durmaksızın çalışmaktayım endişelenme!**')
     if event.sender_id == 5432155018:
