@@ -61,7 +61,7 @@ async def help(event):
                       [Button.url('Beni Gruba Ekle➕', f"https://t.me/{bot_username}?startgroup=a")],
                       [Button.url('Support🛠', f"https://t.me/{support}")],
                       [Button.url('Sahibim🔖', f"https://t.me/{owner}")],
-		                  [Button.url('Developer🧑‍🔧', 'https://t.me/SakirBey1')],
+		                  [Button.url('Developer🧑‍🔧', 'https://t.me/yigitcanb3y')],
 		                  [Button.url('Github Code', 'https://nolur.com')],
                     ),
                     link_preview=False
@@ -339,7 +339,7 @@ async def handler(event):
     # Alive Bot Durumunu Kontrol Etme Yalnızca Adminler İçin !
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sen sahibim değilsin !__")
-    await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @SakirBey1')
+    await event.reply('**Hey Bot Çalışıyor Merak Etme** \n Developer @yigitcanb3y')
 	
 @client.on(events.NewMessage(pattern='^/stats ?(.*)'))
 async def son_durum(event):
@@ -376,11 +376,11 @@ async def start(event):
                       [Button.url('Beni Gruba Ekle ➕', f"https://t.me/{bot_username}?startgroup=a")],
                       [Button.url('Support🛠', f"https://t.me/{support}")],
                       [Button.url('Sahibim', f"https://t.me/{owner}")],
-		                  [Button.url('Developer👨🏻‍💻', 'https://t.me/SakirBey1')],
+		                  [Button.url('Developer👨🏻‍💻', 'https://t.me/yigitcanb3y')],
 		                  [Button.url('Github Code', 'https://nolur.com')],
                     ),
                     link_preview=False
                    )
 
-print(">> Bot çalıyor merak etme 🚀 @SakirBey1 bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 🚀 @yigitcanb3y bilgi alabilirsin <<")
 client.run_until_disconnected()
