@@ -12,7 +12,7 @@ _**Bu bot, gruplarda 10.000'e kadar üyeden bahsedebilir ve kanallarda 200'e kad
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Yigitcanb3y/tagger_bot)
 
 
-**Beni [Github'dan](https://github.com/SakirBey1) takip etmeyi unutmayın ✌️**
+**Beni [Github'dan](https://github.com/yigitcanb3y) takip etmeyi unutmayın ✌️**
 
 
 
